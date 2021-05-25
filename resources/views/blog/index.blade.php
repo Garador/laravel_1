@@ -9,6 +9,9 @@
             <div class="col-md-12 page-body">
                 <div class="row">
                     <div class="col-md-12 content-page">
+                        <div class="title" style="display: flex;justify-content: center;align-items: center;">
+                            <h1>Created Posts!</h1>
+                        </div>
                         @forelse ($posts as $post)
                             @include('blog.components.blog_post_preview', [
                                 'post' => $post

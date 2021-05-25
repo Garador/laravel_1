@@ -14,6 +14,9 @@
             <div class="col-md-12 page-body">
                 @include('blog.components.back_home')
                 <div class="row">
+                    <div class="title" style="display: flex;justify-content: center;align-items: center;">
+                        <h1>{{$data['user']->name}} Posts</h1>
+                    </div>
                     <div class="col-md-12 content-page">
                         @forelse ($data['posts'] as $post)
                             @include('blog.components.blog_post_preview', [

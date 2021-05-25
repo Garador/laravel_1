@@ -1,11 +1,6 @@
 @extends('blog.layout.base')
 @section('content')
     <div class="row">
-        <!-- About Me (Left Sidebar) Start -->
-        <div class="col-md-3">
-            @include('blog.components.about_blogger')
-        </div>
-        <!-- About Me (Left Sidebar) End -->
 
         <!-- Blog Post (Right Sidebar) Start -->
         <div class="col-md-9">
@@ -13,8 +8,11 @@
                 <div class="row">
                     <div class="sub-title">
                         <a href="{{ route('index') }}" title="Go to Home Page">
-                            <h1>Back Home</h1>
+                            <h3>Back Home</h3>
                         </a>
+                    </div>
+                    <div class="title" style="display: flex;justify-content: center;align-items: center;">
+                        <h1>Create an account with us!</h1>
                     </div>
                     @if (session()->get( 'sign_up_error' ))
                         <div class="alert alert-danger">

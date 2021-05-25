@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Helper\MetadataHelper;
 use app\Helper\SortHelper;
 use Error;
 use Illuminate\Http\Request;
@@ -42,16 +43,21 @@ class AuthController extends Controller
         return redirect(route('auth_sign_in_show'));
     }
 
-    public function showSignUp(){
+    public function showSignUp(Request $request){
         if(Auth::check()){
             return redirect(route('index'));
         }
-        return view("blog.auth_sign_up");
+        $routeName = $request->route()->getName();
+        $metadata = MetadataHelper::assembleMetadata($routeName, []);
+        return view("blog.auth_sign_up", array_merge($metadata));
     }
 
-    public function showSignIn(){
+    public function showSignIn(Request $request){
         if(!Auth::check()){
-            return view("blog.auth_sign_in");
+            $routeName = $request->route()->getName();
+            $metadata = MetadataHelper::assembleMetadata($routeName, []);
+            return view("blog.auth_sign_in", array_merge($metadata));
+            //return view("blog.auth_sign_in");
         }else{
             return redirect(route('index'));
         }

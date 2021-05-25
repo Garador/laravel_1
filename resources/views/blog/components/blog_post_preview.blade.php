@@ -7,7 +7,7 @@
         </a>
     </div>
     <div class="post-info">
-        <span>{{$post->publication_date}} / by
+        <span>{{date('Y-m-d H:i:s', strtotime($post->publication_date))}} UTC / by
             <a href="{{route('show_user_articles', $post->poster->id)}}" target="_blank">{{$post->poster->name}}</a></span>
     </div>
     <p>

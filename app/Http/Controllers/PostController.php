@@ -43,10 +43,12 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
         if(Auth::check()){
-            return view("blog.new");
+            $routeName = $request->route()->getName();
+            $metadata = MetadataHelper::assembleMetadata($routeName, []);
+            return view("blog.new", array_merge($metadata));
         }
         return redirect(route('auth_sign_in_show'));
     }

@@ -53,6 +53,33 @@ class MetadataHelper {
                     ]
                 ]
             ];
+        }else if(strcmp($methodName, "auth_sign_up_show") == 0){
+            return [
+                "metadata" => [
+                    "head" => [
+                        "title" => "Sign up and start writing your articles",
+                        "description" => "Sign up now and start writing your articles!"
+                    ]
+                ]
+            ];
+        }else if(strcmp($methodName, "auth_sign_in_show") == 0){
+            return [
+                "metadata" => [
+                    "head" => [
+                        "title" => "Sign into your account",
+                        "description" => "Sign in now and start writing articles!"
+                    ]
+                ]
+            ];
+        }else if(strcmp($methodName, "create") == 0){
+            return [
+                "metadata" => [
+                    "head" => [
+                        "title" => "Create a new article!",
+                        "description" => "Create and post a new article from your account."
+                    ]
+                ]
+            ];
         }
     }
 }

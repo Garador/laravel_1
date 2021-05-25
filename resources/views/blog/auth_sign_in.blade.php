@@ -1,20 +1,17 @@
 @extends('blog.layout.base')
 @section('content')
     <div class="row">
-        <!-- About Me (Left Sidebar) Start -->
-        <div class="col-md-3">
-            @include('blog.components.about_blogger')
-        </div>
-        <!-- About Me (Left Sidebar) End -->
-
         <!-- Blog Post (Right Sidebar) Start -->
         <div class="col-md-9">
             <div class="col-md-12 page-body">
                 <div class="row">
                     <div class="sub-title">
                         <a href="{{ route('index') }}" title="Go to Home Page">
-                            <h1>Back Home</h1>
+                            <h3>Back Home</h3>
                         </a>
+                    </div>
+                    <div class="title" style="display: flex;justify-content: center;align-items: center;">
+                        <h1>Sign into your account</h1>
                     </div>
                     <div class="col-md-12 content-page">
                         <form action="{{route('auth_sign_in_handle')}}" method="POST">
