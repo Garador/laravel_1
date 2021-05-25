@@ -24,8 +24,8 @@
     @endif
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="images/favicon/favicon.ico">
-    <link rel="apple-touch-icon" sizes="144x144" type="image/x-icon" href="images/favicon/apple-touch-icon.png">
+    <link rel="shortcut icon" href="{{asset('images/favicon/favicon.ico')}}">
+    <link rel="apple-touch-icon" sizes="144x144" type="image/x-icon" href="{{asset('images/favicon/apple-touch-icon.png')}}">
 
     <!-- All CSS Plugins -->
     <link rel="stylesheet" type="text/css" href="{{asset('css/plugin.css')}}">
