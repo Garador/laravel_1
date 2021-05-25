@@ -1,0 +1,12 @@
+nav[role='navigation'] {
+    display: flex;
+    justify-content: center;
+}
+
+nav[role='navigation'] span, nav[role='navigation'] a {
+    background-color: lightgrey;
+    padding: 0.5em;
+    font-weight: bolder;
+    cursor: pointer;
+    border-radius: 0.5em;
+}
