@@ -11,6 +11,6 @@
             <a href="{{route('show_user_articles', $post->poster->id)}}" target="_blank">{{$post->poster->name}}</a></span>
     </div>
     <p>
-        {{$post->content}}
+        {{substr(htmlspecialchars($post->content), 0, 300)."..."}}
     </p>
 </div>
